@@ -428,18 +428,7 @@
       </div>
     </div>
     <figure class="photo hero-photo reveal">
-      <!-- Placeholder Cloudinary video — swap the public ID below for your real AFL video when it's ready -->
-      <link rel="stylesheet" href="https://unpkg.com/cloudinary-video-player@2/dist/cld-video-player.min.css">
-      <script src="https://unpkg.com/cloudinary-video-player@2/dist/cld-video-player.min.js"></script>
-      <video id="afl-video" class="cld-video-player cld-fluid" controls muted autoplay playsinline></video>
-      <script>
-        cloudinary.videoPlayer('afl-video', { cloudName: 'dqvbzmy9o' })
-          .source('MelbournePark_V2_z22dnc', {
-            sourceTypes: ['mp4'],
-            transformation: { quality: 'auto', fetch_format: 'auto' }
-          })
-          .poster('https://res.cloudinary.com/dqvbzmy9o/video/upload/so_2,q_auto/MelbournePark_V2_z22dnc.jpg');
-      </script>
+      <video id="afl-video" src="../videos/afl-application.mp4" poster="../images/afl-poster.jpg" controls muted autoplay playsinline preload="metadata"></video>
     </figure>
   </div>
 
