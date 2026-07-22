@@ -147,10 +147,19 @@
   .hero .lede p { margin-bottom: 18px; }
   .hero .lede p:last-child { margin-bottom: 0; }
   .hero .lede strong { color: var(--ink); font-weight: 600; }
-  .hero-photo { aspect-ratio: 9 / 16; width: 100%; max-width: 300px; margin-left: auto; margin-top: 41px; }
+  .hero-media { width: 100%; max-width: 300px; margin-left: auto; margin-top: 41px; display: flex; flex-direction: column; gap: 14px; }
+  .hero-photo { aspect-ratio: 9 / 16; width: 100%; }
+  .cv-btn {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700;
+    background: var(--navy); color: #ffffff;
+    padding: 13px 20px; border-radius: 999px;
+    transition: background .2s;
+  }
+  .cv-btn:hover { background: var(--navy-dark); }
   @media (max-width: 820px){
     .hero-top { grid-template-columns: 1fr; gap: 34px; }
-    .hero-photo { max-width: 260px; width: 100%; justify-self: center; aspect-ratio: 9 / 16; margin-left: 0; margin-top: 0; }
+    .hero-media { max-width: 260px; justify-self: center; margin-left: 0; margin-top: 0; }
   }
 
   /* metric ticker — the signature instrument readout */
@@ -427,9 +436,12 @@
         <p>I&rsquo;ve also recorded a short video alongside this page to introduce myself properly.</p>
       </div>
     </div>
-    <figure class="photo hero-photo reveal">
-      <video id="afl-video" src="../videos/afl-application.mp4" poster="../images/afl-poster.jpg" controls muted autoplay playsinline preload="metadata"></video>
-    </figure>
+    <div class="hero-media reveal">
+      <figure class="photo hero-photo">
+        <video id="afl-video" src="../videos/afl-application.mp4" poster="../images/afl-poster.jpg" controls muted autoplay playsinline preload="metadata"></video>
+      </figure>
+      <a class="cv-btn" href="../files/Daniel_Pinne_CV_AFL_Senior_Digital_Producer.pdf" target="_blank" rel="noopener">Download My CV</a>
+    </div>
   </div>
 
   <div class="ticker reveal">
@@ -714,7 +726,7 @@
       <h2>Let&rsquo;s talk about the Senior Digital Producer role.</h2>
       <p>I&rsquo;m always happy to talk through my application, the video message above, or anything on this page &mdash; whenever suits.</p>
       <div class="links">
-        <a class="primary" href="mailto:dpinne9@gmail.com">dpinne9@gmail.com</a>
+        <a class="primary" href="mailto:dan@danpinne.com">dan@danpinne.com</a>
         <a href="tel:+61414273365">0414 273 365</a>
         <a href="https://linkedin.com/in/danielpinne" target="_blank" rel="noopener">LinkedIn</a>
       </div>
