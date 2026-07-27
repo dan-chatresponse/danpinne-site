@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dan Pinne — Ecommerce Optimisation Lead Application | Patagonia</title>
+<meta name="description" content="Dan Pinne's application for the Ecommerce Optimisation Lead role at Patagonia — CRO, experimentation, customer experience and Shopify optimisation." />
+<meta name="theme-color" content="#1E2E3D" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%231E2E3D'/%3E%3Ctext x='50' y='53' font-family='Arial,Helvetica,sans-serif' font-size='40' font-weight='700' letter-spacing='-1' fill='white' text-anchor='middle' dominant-baseline='central'%3EDP%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #1E1B16;
+    --blue: #BB4E28;
+    --navy: #1E2E3D;
+    --navy-dark: #14202B;
+    --signal: #E8894A;
+    --paper: #F4EEE3;
+    --card: #FFFDF8;
+    --line: #E4DBCA;
+    --muted: #6E655A;
+    --body: #33302A;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--paper); color: var(--ink); font-family: 'Inter', system-ui, sans-serif; font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 32px; }
+  a { color: inherit; text-decoration: none; }
+  .eyebrow { font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--blue); }
+  h2 { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(28px, 4vw, 42px); line-height: 1.05; letter-spacing: -0.02em; }
+  .photo { position: relative; overflow: hidden; border-radius: 16px; background: var(--card); }
+  .photo img, .photo iframe, .photo video { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; object-fit: cover; border: 0; }
+  .photo__ph { position: absolute; inset: 0; z-index: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; text-align: center; padding: 22px; border: 2px dashed var(--line); border-radius: 16px; background: var(--card); font-family: 'Space Mono', monospace; color: var(--muted); font-size: 12px; line-height: 1.5; }
+  .photo__ph .ic { width: 38px; height: 38px; border-radius: 50%; background: rgba(0,0,0,0.06); color: var(--blue); display: grid; place-items: center; font-size: 18px; margin-bottom: 2px; }
+  .photo__ph code { color: var(--blue); font-weight: 700; }
+  .photo__ph span { font-size: 11px; opacity: 0.8; }
+  nav { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--paper) 82%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .brand { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.01em; display: flex; align-items: center; gap: 9px; }
+  .brand .dot { width: 11px; height: 11px; border-radius: 50%; background: var(--blue); }
+  .nav-links { display: flex; align-items: center; gap: 28px; }
+  .nav-links a { font-size: 14px; color: var(--muted); font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-links a.nav-cta { font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700; background: var(--navy); color: #ffffff; padding: 9px 16px; border-radius: 999px; transition: background .2s; }
+  .nav-links a.nav-cta:hover { background: var(--navy-dark); color: #ffffff; }
+  @media (max-width: 720px){ .nav-links .hide-sm { display: none; } }
+  .hero { padding-top: 80px; padding-bottom: 64px; scroll-margin-top: 80px; }
+  .hero-top { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 52px; align-items: start; margin-bottom: 52px; }
+  .hero .role { margin-bottom: 22px; }
+  .hero h1 { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(38px, 5.6vw, 64px); line-height: 1.03; letter-spacing: -0.03em; margin-bottom: 24px; }
+  .hero h1 .accent { color: var(--blue); }
+  .hero .lede { font-size: clamp(18px, 2.1vw, 21px); line-height: 1.5; color: var(--body); }
+  .hero .lede p { margin-bottom: 18px; }
+  .hero .lede p:last-child { margin-bottom: 0; }
+  .hero .lede strong { color: var(--ink); font-weight: 600; }
+  .hero-media { width: 100%; max-width: 300px; margin-left: auto; margin-top: 41px; display: flex; flex-direction: column; gap: 14px; }
+  .hero-photo { aspect-ratio: 9 / 16; width: 100%; }
+  .hero-logo { aspect-ratio: 1 / 1; width: 100%; background: var(--navy); border-radius: 16px; display: grid; place-items: center; overflow: hidden; box-shadow: 0 22px 48px -26px rgba(0,0,0,0.5); }
+  .hero-logo svg { width: 80%; height: 80%; display: block; }
+  .cv-btn { display: flex; align-items: center; justify-content: center; gap: 8px; font-family: 'Space Mono', monospace; font-size: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; background: var(--navy); color: #ffffff; padding: 13px 20px; border-radius: 999px; transition: background .2s; }
+  .cv-btn:hover { background: var(--navy-dark); }
+  @media (max-width: 820px){ .hero-top { grid-template-columns: 1fr; gap: 34px; } .hero-media { max-width: 280px; justify-self: center; margin-left: 0; margin-top: 0; } }
+  .ticker { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .ticker .cell { padding: 22px 22px 22px 18px; border-right: 1px solid var(--line); }
+  .ticker .cell:first-child { padding-left: 0; }
+  .ticker .cell:last-child { border-right: none; }
+  .ticker .num { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(28px, 4.2vw, 44px); line-height: 1; letter-spacing: -0.03em; color: var(--blue); }
+  .ticker .num .sym { font-size: 0.6em; vertical-align: 0.08em; margin-left: 1px; }
+  .ticker .lab { font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-top: 10px; }
+  @media (max-width: 720px){ .ticker { grid-template-columns: repeat(2, 1fr); } .ticker .cell { padding: 18px; border-bottom: 1px solid var(--line); } .ticker .cell:nth-child(2n){ border-right: none; } .ticker .cell:nth-child(odd){ padding-left: 0; } .ticker .cell:nth-child(3), .ticker .cell:nth-child(4){ border-bottom: none; } }
+  section { padding: 72px 0; border-top: 1px solid var(--line); scroll-margin-top: 72px; }
+  .sec-head { margin-bottom: 44px; max-width: 720px; }
+  .sec-head .eyebrow { display: block; margin-bottom: 14px; }
+  .sec-head p { color: var(--muted); margin-top: 16px; font-size: 18px; }
+  .about-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; }
+  .about-grid p { margin-bottom: 18px; color: var(--body); }
+  .about-grid p:last-child { margin-bottom: 0; }
+  .about-side-col { display: flex; flex-direction: column; gap: 18px; }
+  .about-photo { aspect-ratio: 5 / 4; }
+  .about-side { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 26px; }
+  .about-side .eyebrow { display:block; margin-bottom: 16px; }
+  .about-side ul { list-style: none; }
+  .about-side li { display: flex; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+  .about-side li:last-child { border-bottom: none; }
+  .about-side li b { font-weight: 600; min-width: 92px; }
+  .about-side li span { color: var(--muted); }
+  @media (max-width: 760px){ .about-grid { grid-template-columns: 1fr; gap: 32px; } }
+  .xp { display: grid; grid-template-columns: 220px 1fr; gap: 36px; padding: 32px 0; border-top: 1px solid var(--line); }
+  .xp:first-of-type { border-top: none; }
+  .xp .meta .org { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: -0.01em; }
+  .xp .meta .when { font-family: 'Space Mono', monospace; font-size: 12px; color: var(--muted); margin-top: 6px; }
+  .xp .meta .tag { display: inline-block; margin-top: 12px; font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--blue); border: 1px solid var(--line); padding: 4px 9px; border-radius: 6px; }
+  .xp .body .title { font-weight: 600; font-size: 17px; margin-bottom: 14px; }
+  .xp .body ul { list-style: none; }
+  .xp .body li { position: relative; padding-left: 22px; margin-bottom: 9px; color: var(--body); font-size: 15.5px; }
+  .xp .body li::before { content: ""; position: absolute; left: 0; top: 10px; width: 7px; height: 7px; border-radius: 2px; background: var(--signal); }
+  .xp .body li b { color: var(--ink); font-weight: 600; }
+  @media (max-width: 760px){ .xp { grid-template-columns: 1fr; gap: 16px; } }
+  .caps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .cap { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 26px; transition: transform .25s, box-shadow .25s, border-color .25s; }
+  .cap:hover { transform: translateY(-3px); border-color: var(--blue); box-shadow: 0 14px 30px -18px rgba(0,0,0,0.35); }
+  .cap .n { font-family: 'Space Mono', monospace; font-size: 12px; color: var(--blue); }
+  .cap h3 { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 21px; margin: 8px 0 12px; letter-spacing: -0.01em; }
+  .cap p { font-size: 15px; color: var(--muted); }
+  @media (max-width: 620px){ .caps { grid-template-columns: 1fr; } }
+  .flagship { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; background: var(--navy); color: #fff; border-radius: 18px; padding: 42px; margin-bottom: 18px; }
+  .flagship .kind { font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--signal); }
+  .flagship h3 { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(30px, 4vw, 38px); letter-spacing: -0.02em; margin: 8px 0 14px; }
+  .flagship-info p { color: rgba(255,255,255,0.82); font-size: 16px; margin-bottom: 20px; }
+  .flagship-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .flagship-tags span { font-family: 'Space Mono', monospace; font-size: 12px; border: 1px solid rgba(255,255,255,0.28); border-radius: 999px; padding: 6px 12px; color: rgba(255,255,255,0.92); }
+  .flagship-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px 28px; align-content: center; }
+  .fs .v { display: block; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(28px, 3.6vw, 34px); letter-spacing: -0.02em; color: var(--signal); line-height: 1; }
+  .fs .k { font-size: 13px; color: rgba(255,255,255,0.75); margin-top: 7px; display: block; }
+  @media (max-width: 820px){ .flagship { grid-template-columns: 1fr; padding: 30px; gap: 28px; } }
+  .cases-label { font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin: 30px 0 16px; }
+  .cases { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .case { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--card); display: flex; flex-direction: column; }
+  .case .top { background: var(--navy); color: #fff; padding: 22px; }
+  .case .top .name { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -0.01em; }
+  .case .top .kind { font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--signal); margin-top: 4px; }
+  .case .body { padding: 22px; flex: 1; }
+  .case .body p { font-size: 14.5px; color: var(--muted); margin-bottom: 16px; }
+  .case .stat { display: flex; align-items: baseline; gap: 8px; padding: 7px 0; border-top: 1px solid var(--line); }
+  .case .stat .v { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 22px; color: var(--blue); letter-spacing: -0.02em; }
+  .case .stat .k { font-size: 13px; color: var(--muted); }
+  @media (max-width: 820px){ .cases { grid-template-columns: 1fr; } }
+  .client-quote { grid-column: 1 / -1; display: flex; gap: 24px; align-items: flex-start; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.16); border-radius: 14px; padding: 26px; margin-top: 18px; }
+  .client-quote .avatar { position: relative; overflow: hidden; flex-shrink: 0; width: 64px; height: 64px; border-radius: 50%; background: rgba(255,255,255,0.08); }
+  .client-quote .avatar img { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; object-fit: cover; }
+  .client-quote .avatar__ph { position: absolute; inset: 0; z-index: 0; display: flex; align-items: center; justify-content: center; border: 1.5px dashed rgba(255,255,255,0.35); border-radius: 50%; }
+  .client-quote .avatar__ph .ic { color: rgba(255,255,255,0.6); font-size: 16px; }
+  .client-quote .mark { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 26px; color: var(--signal); line-height: 0.6; display: block; margin-bottom: 6px; }
+  .client-quote p { font-size: 15px; color: rgba(255,255,255,0.82); margin-bottom: 14px; }
+  .client-quote .by b { font-weight: 600; display: block; font-size: 14.5px; color: #fff; }
+  .client-quote .by span { font-size: 13px; color: rgba(255,255,255,0.66); }
+  @media (max-width: 620px){ .client-quote { flex-direction: column; } }
+  .quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .quote { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 26px; }
+  .quote .mark { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 40px; color: var(--signal); line-height: 0.6; }
+  .quote p { font-size: 15px; margin: 14px 0 20px; color: var(--body); }
+  .quote .by b { font-weight: 600; display: block; font-size: 15px; }
+  .quote .by span { font-size: 13px; color: var(--muted); }
+  @media (max-width: 820px){ .quotes { grid-template-columns: 1fr; } }
+  .tools { display: flex; flex-wrap: wrap; gap: 10px; }
+  .tools span { font-family: 'Space Mono', monospace; font-size: 13px; border: 1px solid var(--line); border-radius: 999px; padding: 8px 15px; color: var(--body); background: var(--card); }
+  .contact { background: var(--blue); color: #fff; border-radius: 20px; padding: 56px; text-align: left; }
+  .contact .eyebrow { color: #ffffff; }
+  .contact h2 { color: #fff; margin: 14px 0 18px; max-width: 640px; }
+  .contact p { color: rgba(255,255,255,0.9); max-width: 560px; margin-bottom: 30px; }
+  .contact .links { display: flex; flex-wrap: wrap; gap: 12px; }
+  .contact .links a { font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 700; padding: 12px 20px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.45); transition: background .2s, color .2s, border-color .2s; }
+  .contact .links a.primary { background: #fff; color: var(--navy); border-color: #fff; }
+  .contact .links a:hover { background: rgba(255,255,255,0.16); }
+  .contact .links a.primary:hover { background: var(--navy); color: #fff; border-color: var(--navy); }
+  @media (max-width: 620px){ .contact { padding: 36px 26px; } }
+  footer { padding: 40px 0 56px; }
+  .foot-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; }
+  .foot-inner span { font-family: 'Space Mono', monospace; font-size: 12px; color: var(--muted); }
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce){ html { scroll-behavior: auto; } .reveal { opacity: 1; transform: none; transition: none; } }
+  :focus-visible { outline: 2.5px solid var(--blue); outline-offset: 3px; border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top"><span class="dot"></span> Dan Pinne</a>
+    <div class="nav-links">
+      <a class="hide-sm" href="#capabilities">What I do</a>
+      <a class="hide-sm" href="#cases">Selected work</a>
+      <a class="hide-sm" href="#work">Experience</a>
+      <a class="nav-cta" href="#contact">Get in touch</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero wrap" id="top">
+  <div class="hero-top">
+    <div class="hero-copy">
+      <div class="role eyebrow reveal">Application &mdash; Ecommerce Optimisation Lead, Patagonia</div>
+      <h1 class="reveal">Find the friction. Test the fix. <span class="accent">Do it for a planet worth it.</span></h1>
+      <div class="lede reveal">
+        <p>I&rsquo;m Dan &mdash; an ecommerce and digital optimisation specialist with 10+ years turning customer behaviour, data and experimentation into measurable conversion and revenue growth across Shopify retail, subscription apps and sport.</p>
+        <p>I work at the intersection of customer experience, ecommerce trading and <strong>CRO</strong>: mining analytics and customer insight to find friction, running structured test-and-learn programs, and improving search, navigation and product discovery so people find the right thing faster. I care as much about <em>why</em> customers behave the way they do as about the numbers themselves.</p>
+        <p>Beyond work I&rsquo;m an outdoors person and dad who grew up on the NSW South Coast &mdash; most of my free time goes to the ocean, the golf course and getting my kids into wild places. Patagonia&rsquo;s belief that business can be a force to protect our home planet is exactly the kind of purpose I want my work pointed at. <em>(A short video introduction and portfolio sit alongside this page.)</em></p>
+      </div>
+    </div>
+    <div class="hero-media reveal">
+      <figure class="photo hero-photo">
+        <img src="../images/patagonia-hero.jpg" alt="Dan Pinne" onerror="this.style.display='none'" />
+        <figcaption class="photo__ph">
+          <span class="ic">&#9654;</span>
+          Your video or imagery<br>
+          <code>images/patagonia-hero.jpg</code>
+          <span>Portrait 9:16 &middot; video or photo</span>
+        </figcaption>
+      </figure>
+      <a class="cv-btn" href="../files/Daniel_Pinne_CV_Patagonia.pdf" target="_blank" rel="noopener">Download My CV</a>
+    </div>
+  </div>
+
+  <div class="ticker reveal">
+    <div class="cell">
+      <div class="num" data-count="78" data-prefix="+" data-suffix="%"><span class="sym">+</span>0<span class="sym">%</span></div>
+      <div class="lab">Lead generation &middot; 24/7 GOLF</div>
+    </div>
+    <div class="cell">
+      <div class="num" data-count="233" data-prefix="+" data-suffix="%"><span class="sym">+</span>0<span class="sym">%</span></div>
+      <div class="lab">Time on site &middot; 24/7 GOLF</div>
+    </div>
+    <div class="cell">
+      <div class="num" data-count="27" data-prefix="+" data-suffix="%"><span class="sym">+</span>0<span class="sym">%</span></div>
+      <div class="lab">Average order value &middot; 24/7 GOLF</div>
+    </div>
+    <div class="cell">
+      <div class="num" data-count="22" data-prefix="+" data-suffix="%"><span class="sym">+</span>0<span class="sym">%</span></div>
+      <div class="lab">MoM growth &middot; GOLFTRAK</div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section id="capabilities">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">How my experience maps to Patagonia</span>
+      <h2>Experimentation and customer experience that move conversion &mdash; and last.</h2>
+      <p>Here&rsquo;s how my optimisation work maps to this role &mdash; owning conversion and the journey, running structured experimentation, and improving discovery so the right products surface faster.</p>
+    </div>
+    <div class="caps">
+      <div class="cap reveal">
+        <div class="n">01</div>
+        <h3>Ecommerce &amp; digital optimisation</h3>
+        <p>I&rsquo;ve spent 10+ years owning conversion, trading performance and the customer journey across Shopify retail, a subscription app and client stores.</p>
+      </div>
+      <div class="cap reveal">
+        <div class="n">02</div>
+        <h3>Experimentation programs</h3>
+        <p>I run structured test-and-learn &mdash; hypotheses, A/B and multivariate tests, funnel and message experiments &mdash; turning results into continuous, measurable improvement rather than one-off wins.</p>
+      </div>
+      <div class="cap reveal">
+        <div class="n">03</div>
+        <h3>Search, navigation &amp; discovery</h3>
+        <p>I&rsquo;ve improved on-site search, navigation, category and product-page experiences so customers find the right products faster &mdash; grounded in usability testing, session analysis and behavioural data.</p>
+      </div>
+      <div class="cap reveal">
+        <div class="n">04</div>
+        <h3>Analytical thinking &amp; Shopify</h3>
+        <p>I use GA4, BigQuery, Segment and CRO tooling to turn behavioural data into practical recommendations, and I&rsquo;m hands-on with Shopify theme, catalogue, checkout and the app ecosystem.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cases">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Selected work</span>
+      <h2>Journeys tested, rebuilt and measurably improved.</h2>
+      <p>The flagship is a full customer-journey rebuild for a high-value retailer, driven by experimentation and behavioural data. Alongside it, conversion work at GolfTrak and audience growth at Melbourne Storm.</p>
+    </div>
+
+    <div class="flagship reveal">
+      <div class="flagship-info">
+        <div class="kind">eCommerce &middot; CRO, Journey &amp; Experimentation</div>
+        <h3>24/7 Golf</h3>
+        <p>Through my consultancy Chat Response, I rebuilt the end-to-end customer journey for 24/7 Golf, a high-value ecommerce retailer &mdash; unifying store, Klaviyo, lead scoring and Salesforce into one automated funnel that educated customers long before a salesperson stepped in. Right-time, behaviour-triggered communications and funnel testing did the heavy lifting. It&rsquo;s the same discipline of insight, experimentation and journey design I&rsquo;d bring to Patagonia&rsquo;s store.</p>
+        <div class="flagship-tags">
+          <span>CRO</span><span>A/B testing</span><span>Journey design</span><span>Behavioural data</span>
+        </div>
+      </div>
+      <div class="flagship-stats">
+        <div class="fs"><span class="v">+78%</span><span class="k">lead generation</span></div>
+        <div class="fs"><span class="v">+233%</span><span class="k">average time on site</span></div>
+        <div class="fs"><span class="v">+150%</span><span class="k">salesperson conversion</span></div>
+        <div class="fs"><span class="v">+27%</span><span class="k">average order value</span></div>
+      </div>
+
+      <div class="client-quote reveal">
+        <div class="avatar">
+          <img src="../images/Igor_GolfTrak.png" alt="Igor Vainshtein" onerror="this.style.display='none'" />
+          <div class="avatar__ph"><span class="ic">&#128100;</span></div>
+        </div>
+        <div>
+          <span class="mark">&ldquo;</span>
+          <p>Dan was able to take years of legacy data and bring our sales and systems into the 21st century. His ability to patiently work with our team and gradually implement new tools and systems was especially helpful.</p>
+          <div class="by"><b>Igor Vainshtein</b><span>CEO, 24/7 Golf</span></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="cases-label reveal">More optimisation &amp; growth work</p>
+    <div class="cases">
+      <div class="case reveal">
+        <div class="top">
+          <div class="name">GolfTrak</div>
+          <div class="kind">Subscription app &middot; Conversion &amp; UX</div>
+        </div>
+        <div class="body">
+          <p>Own acquisition, onboarding and conversion &mdash; testing messaging, sequencing and pricing presentation, and turning behaviour into product and journey improvements.</p>
+          <div class="stat"><span class="v">+22%</span><span class="k">avg. MoM growth</span></div>
+          <div class="stat"><span class="v">&minus;25%</span><span class="k">acquisition cost</span></div>
+          <div class="stat"><span class="v">30%</span><span class="k">free-trial adoption</span></div>
+        </div>
+      </div>
+      <div class="case reveal">
+        <div class="top">
+          <div class="name">Melbourne Storm</div>
+          <div class="kind">Sport &middot; Audience &amp; UX</div>
+        </div>
+        <div class="body">
+          <p>Built the club&rsquo;s first digital function, lifting audience and engagement through content, UX and channel optimisation across owned platforms.</p>
+          <div class="stat"><span class="v">+29%</span><span class="k">monthly audience</span></div>
+          <div class="stat"><span class="v">+61%</span><span class="k">video views</span></div>
+          <div class="stat"><span class="v">1&rarr;4.5</span><span class="k">team built &amp; led</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Experience</span>
+      <h2>Where I&rsquo;ve optimised the journey.</h2>
+    </div>
+
+    <div class="xp reveal">
+      <div class="meta">
+        <div class="org">GolfTrak</div>
+        <div class="when">Jan 2026 — Present</div>
+        <div class="tag">Conversion</div>
+      </div>
+      <div class="body">
+        <div class="title">User Growth Lead — Acquisition, Conversion &amp; Lifecycle</div>
+        <ul>
+          <li>Improved subscription conversion through onboarding, funnel and value-communication experiments &mdash; testing messaging, sequencing and pricing presentation</li>
+          <li>Grew users an average of <b>22% month-on-month</b> and cut acquisition cost <b>25%</b> through structured acquisition testing and creative iteration</li>
+          <li>Used <b>GA4, Firebase, Segment and BigQuery</b> to analyse behaviour, build dashboards and turn usage patterns into product and journey improvements</li>
+          <li>Segmented and personalised onboarding and lifecycle touchpoints by activity, trial status and support signals to lift conversion at each stage</li>
+        </ul>
+      </div>
+    </div>
+    <div class="xp reveal">
+      <div class="meta">
+        <div class="org">Chat Response</div>
+        <div class="when">Feb 2015 — Jul 2023</div>
+        <div class="tag">Founder</div>
+      </div>
+      <div class="body">
+        <div class="title">Founder — Ecommerce, CRO &amp; Automation</div>
+        <ul>
+          <li>Rebuilt the end-to-end customer journey for <b>24/7 Golf</b>, unifying store, Klaviyo, lead scoring and Salesforce into one automated funnel</li>
+          <li>Lifted lead generation <b>78%</b>, time on site <b>233%</b> and salesperson conversion <b>150%</b> through right-time, behaviour-triggered communications and funnel testing</li>
+          <li>Improved sales conversion <b>23%</b> and AOV <b>27%</b> on $3K+ equipment through better enquiry capture, follow-up and education</li>
+          <li>Generated <b>$70K+</b> in campaign revenue for The Masque Co. through targeted, segmented ecommerce campaigns</li>
+        </ul>
+      </div>
+    </div>
+    <div class="xp reveal">
+      <div class="meta">
+        <div class="org">GolfTrak</div>
+        <div class="when">Aug 2023 — Feb 2026</div>
+        <div class="tag">Product</div>
+      </div>
+      <div class="body">
+        <div class="title">Product Owner — iOS Mobile App</div>
+        <ul>
+          <li>Took a product six years in development to public launch and <b>20,000+ downloads</b> in six months, optimising onboarding and trial conversion throughout</li>
+          <li>Led agile delivery of a <b>mobile-first</b> product across roadmap, UX, sprint delivery, release coordination and testing</li>
+          <li>Introduced subscription and in-app purchase systems, reaching <b>30% free-trial adoption</b> and <b>15% retention</b> after trial</li>
+        </ul>
+      </div>
+    </div>
+    <div class="xp reveal">
+      <div class="meta">
+        <div class="org">Melbourne Storm</div>
+        <div class="when">Sep 2011 — May 2014</div>
+        <div class="tag">Digital</div>
+      </div>
+      <div class="body">
+        <div class="title">Digital Media Manager</div>
+        <ul>
+          <li>Increased average monthly website audience <b>29%</b> and video views <b>61%</b> through content, UX and channel optimisation</li>
+          <li>Shifted the function from a cost centre to a revenue-generating one through branded content and digital partnerships</li>
+          <li>Worked across media, commercial, membership, football and community teams to deliver integrated digital campaigns</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="reveal">
+        <span class="eyebrow" style="display:block;margin-bottom:14px;">About</span>
+        <h2 style="margin-bottom:22px;">Curious about customers, serious about the planet.</h2>
+        <p>I like the part of this work where a hunch about customer behaviour becomes a hypothesis, a test, and a measurable lift &mdash; then the next one. I treat &ldquo;good enough&rdquo; as a starting point, not a finish line, and I&rsquo;m happy to challenge convention when there&rsquo;s a better outcome for the customer.</p>
+        <p>I&rsquo;m an outdoors person and dad &mdash; the ocean, the golf course, and getting my kids into wild places. Work that protects those places matters to me, which is why Patagonia&rsquo;s mission is the kind of purpose I want my optimisation work pointed at.</p>
+        <p>Day-to-day I&rsquo;m hands-on with Shopify, GA4, experimentation tooling and the behavioural data underneath &mdash; comfortable moving projects forward with minimal supervision.</p>
+      </div>
+      <div class="about-side-col reveal">
+        <figure class="photo about-photo">
+          <img src="../images/dan-about.jpg" alt="Dan Pinne" onerror="this.style.display='none'" />
+          <figcaption class="photo__ph">
+            <span class="ic">&#43;</span>
+            Your photo<br>
+            <code>images/dan-about.jpg</code>
+            <span>Landscape · ~1000&times;800px</span>
+          </figcaption>
+        </figure>
+        <aside class="about-side">
+          <span class="eyebrow">At a glance</span>
+          <ul>
+            <li><b>Based</b><span>Melbourne, VIC &mdash; open to remote</span></li>
+            <li><b>Now</b><span>User Growth Lead, GolfTrak</span></li>
+            <li><b>Focus</b><span>CRO &middot; experimentation &middot; CX</span></li>
+            <li><b>Strengths</b><span>Testing, discovery, journey design, Shopify</span></li>
+            <li><b>Stack</b><span>Shopify &middot; GA4 &middot; BigQuery &middot; Segment &middot; Klaviyo</span></li>
+            <li><b>Education</b><span>Bachelor of Sports Administration, VU</span></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="words">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">References</span>
+      <h2>What people I&rsquo;ve worked with say.</h2>
+    </div>
+    <div class="quotes">
+      <div class="quote reveal">
+        <div class="mark">&ldquo;</div>
+        <p>Dan was able to take years of legacy data and bring our sales and systems into the 21st century. His ability to patiently work with our team and gradually implement new tools and systems was especially helpful.</p>
+        <div class="by"><b>Igor Vainshtein</b><span>CEO, 24/7 Golf</span></div>
+      </div>
+      <div class="quote reveal">
+        <div class="mark">&ldquo;</div>
+        <p>I thought I knew online advertising. I was wrong. Dan has his finger on the pulse of all things ads and is now my go-to. I&rsquo;m always confident referring work to him.</p>
+        <div class="by"><b>Bonnie Borland</b><span>Co-Founder, Oliver Grace &middot; Organik Digital</span></div>
+      </div>
+      <div class="quote reveal">
+        <div class="mark">&ldquo;</div>
+        <p>My go-to for chatbot marketing and advertising. His ability to problem-solve while generating business outcomes is second to none &mdash; results we couldn&rsquo;t have envisaged without him.</p>
+        <div class="by"><b>Loren Bartley</b><span>Founder, Impactiv8 &middot; Chat Response</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tools">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:28px;">
+      <span class="eyebrow">Platforms &amp; tools</span>
+    </div>
+    <div class="tools reveal">
+      <span>Shopify</span><span>GA4</span><span>BigQuery</span><span>Segment</span><span>Firebase</span><span>Klaviyo</span><span>Salesforce</span><span>Hubspot</span><span>Figma</span><span>A/B &amp; MVT testing</span><span>Usability testing</span><span>Claude</span><span>OpenAI</span>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact reveal">
+      <span class="eyebrow">Get in touch</span>
+      <h2>Let&rsquo;s talk about the Ecommerce Optimisation Lead role.</h2>
+      <p>I&rsquo;m always happy to talk through my application, the video introduction, my CV, or anything on this page &mdash; whenever suits.</p>
+      <div class="links">
+        <a class="primary" href="mailto:dan@danpinne.com">dan@danpinne.com</a>
+        <a href="tel:+61414273365">0414 273 365</a>
+        <a href="https://linkedin.com/in/danielpinne" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <span>© 2026 Dan Pinne</span>
+    <span>Melbourne, VIC · Available remotely</span>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function wrap(s){ return s ? '<span class="sym">' + s + '</span>' : ''; }
+  function animateCount(el){
+    const target = parseFloat(el.dataset.count);
+    const prefix = el.dataset.prefix || '';
+    const suffix = el.dataset.suffix === undefined ? '%' : el.dataset.suffix;
+    const decimals = (String(el.dataset.count).split('.')[1] || '').length;
+    if (reduce){ el.innerHTML = wrap(prefix) + target.toFixed(decimals) + wrap(suffix); return; }
+    let start = null; const dur = 1100;
+    function step(ts){ if (!start) start = ts; const p = Math.min((ts - start) / dur, 1); const eased = 1 - Math.pow(1 - p, 3); const val = (eased * target).toFixed(decimals); el.innerHTML = wrap(prefix) + val + wrap(suffix); if (p < 1) requestAnimationFrame(step); }
+    requestAnimationFrame(step);
+  }
+  const heroIO = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting){ animateCount(e.target); heroIO.unobserve(e.target); } }); }, { threshold: 0.5 });
+  document.querySelectorAll('.ticker .num').forEach(el => heroIO.observe(el));
+</script>
+</body>
+</html>
